@@ -1,0 +1,7 @@
+{
+  "name": "@454812511/test-action-npm-publish",
+  "version": "1.0.8",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  }
+}

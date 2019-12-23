@@ -1,0 +1,26 @@
+
+
+{
+  "name": "@454812511/test-action-npm-publish",
+  "version": "1.0.4",
+  "description": "测试一下  重新提交一下",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:454812511/test-action-npm-publish-000"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/454812511/test-action/issues"
+  },
+  "homepage": "https://github.com/454812511/test-action#readme"
+}

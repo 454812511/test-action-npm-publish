@@ -1,0 +1,29 @@
+on: 
+  push:
+      branches: 
+        - 001
+ 
+name: "在分支 00 中"
+
+jobs:
+  job_01:
+    runs-on: ubuntu-latest
+    name: "打印token.txt中的内容"
+    steps:
+        
+      - name: "直接打印 token "
+        run: echo ${{ secrets.GITHUB_TOKEN }}
+
+      # 因为要持久化文件是以文件夹位单位 , 所以创建一个文件夹 
+      - run: mkdir dist
+
+      - name: "将 token 写入到a.txt 文件 "
+        run: echo ${{ secrets.GITHUB_TOKEN }} > dist/a.txt
+
+      # 持久化
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist
+          path: dist
+ 
